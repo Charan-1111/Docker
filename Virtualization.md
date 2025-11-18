@@ -1,0 +1,58 @@
+# Virtualization
+- Virtualization allows creating virtual versions of computing resources such as servers, storage devices, networks or even entire operating systems on a single physical machine.
+- A software called a hypervisor sits between hardware and operating systems. It allows multiple OS ( called virtual machines / VMs ) to share the same physical resources.
+- Each VM consists of 
+	- Virtual CPU
+	- Virtual Memory
+	- Virtual Disk
+	- Virtual network card
+- For a VM these are looked like real hardware, but its actually simulated by hypervisor.
+- ## Types of Hypervisors
+	- **Bare Metal Hypervisors**
+		- Runs directly on hardware
+		- Best for 
+			- Data centers
+			- Cloud provides ( AWS, Azure )
+		- Pros :- Fast, Secure, Low Overhead
+		- Cons :- Harder to configure.
+	- **Hosted Hypervisors**
+		- Runs on top of an OS
+		- Best for developers running VMs on loptops.
+		- Pros :- Easy to use
+		- Cons :- Slightly slower due to host OS overhead
+- ## Types of Virtualization
+	- **Server Virtualization**
+		- Multiple virtual servers on a single physical server.
+		- Use Cases
+			- Running many applications on one machine.
+			- Cloud Computing ( AWS EC2, Azure VMs ).
+			- Testing environments.
+	- **Desktop Virtualization**
+		- A Desktop OS runs remotely on a server.
+		- Use Cases
+			- VDI
+			- Remote work environments
+			- Cybersecurity labs
+	- **Storage Virtualization**
+		- Combines multiple storage devices into a single local volume
+		- Eg :- RAID, SAN ( Storage Area Networks ), Ceph
+	- **Network Virtualization**
+		- Abstracts network resources
+		- Eg :- VLANs, SDN, NFV.
+	- **Application Virtualization**
+		- Applications runs isolated from OS.
+		- Eg :- Docker, Kubernetes containers, APP-V, ThinAPP.
+	- ## Benefits of Virtualization
+		- Better Resource Utilization :- One physical server can run 10-20 VMs ( huge cost savings ).
+		- Isolation :- A crash in one VM doesn't affect others.
+		- Scalability :- Allocating more CPU/RAM is as simple as changing VM settings.
+		- Easy Backup & Restore :- VMs can be snapshotted and cloned.
+		- High Availability
+			- Features like
+				- Live migration ( moving a VM without downtime ).
+				- Failover Clustering
+			-Faster Provisioning - New VMs can be created in seconds.
+	## Drawbacks
+		- Overhead :- Due to virtualization reduces the performances.
+		- Single Point of Failure :- If the host fails all VM are down.
+		- Complex Management.
